@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 34 // Mantener la versión más reciente
+    namespace 'com.codingstuff.loginandsignup'
+
+    defaultConfig {
+        applicationId "com.codingstuff.loginandsignup"
+        minSdk 23 // Cambiar a 23
+        targetSdk 34 // Mantener la versión más reciente
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1' // Actualizado a la versión más reciente
+    implementation 'androidx.appcompat:appcompat:1.7.0' // Actualizado a la versión más reciente
+    implementation 'com.google.android.material:material:1.12.0' // Actualizado a la versión más reciente
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Actualizado a la versión más reciente
+    implementation platform('com.google.firebase:firebase-bom:33.5.1') // BOM de Firebase
+    implementation 'com.google.firebase:firebase-auth-ktx:23.1.0' // Para autenticación con Firebase
+    implementation 'com.google.firebase:firebase-firestore-ktx' // Firestore
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1' // Actualizado a la versión más reciente
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1' // Actualizado a la versión más reciente
+}

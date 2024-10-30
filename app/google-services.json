@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "102673207895",
+    "project_id": "easystock-1cd62",
+    "storage_bucket": "easystock-1cd62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102673207895:android:5cf8bd5695d31fb5384912",
+        "android_client_info": {
+          "package_name": "com.codingstuff.loginandsignup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgMCAnPQv0GbNyFgMVtLHrSNtWIe41ICA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

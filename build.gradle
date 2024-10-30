@@ -1,0 +1,21 @@
+// Archivo de nivel superior de Gradle para configuración común a todos los subproyectos/módulos.
+buildscript {
+    dependencies {
+        // Actualizamos a las versiones más recientes.
+        classpath 'com.android.tools.build:gradle:8.1.4'
+        classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.1.4' apply false // Actualizado a 8.1.4
+    id 'com.android.library' version '8.1.4' apply false // Actualizado a 8.1.4
+    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false // Mantén la versión actual de Kotlin
+    id("com.google.gms.google-services") version "4.4.2" apply false // Actualizado a 4.4.2
+}
+
+// Limpieza del proyecto
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
